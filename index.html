@@ -5,7 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Veronica Rodriguez — UX Designer</title>
+
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,63 +28,119 @@
     </style>
 </head>
 
-<body class="bg-rose-50 text-slate-800">
+<body class="bg-[#fff1e3] text-[#2F2A26]">
+
+    <!-- Header -->
+    <div id="header"> </div>
 
 
-    <header class="max-w-5xl mx-auto px-6 py-20">
-        <h1 class="text-5xl mb-6">Vero Rod</h1>
-        <p class="text-xl max-w-2xl text-slate-600">
-            UX designer crafting thoughtful, human-centered experiences for complex accounting exam prep platforms.
-        </p>
-    </header>
+    <!-- Hero -->
+    <section class="max-w-6xl mx-auto px-6 py-24">
+        <h2 class="text-4xl md:text-5xl font-semibold leading-tight">
+            Nice to meet you, I’m Veronica.
+            <br />
+            I'm a <span class="text-[#F74560]">UX Designer</span> solving user problems one coffee at a time. <span
+                class="text-[#4685D2]">Let’s work together!</span>
+        </h2>
+    </section>
 
+    <!-- Projects -->
+    <section class="max-w-6xl mx-auto px-6 py-12 space-y-16">
 
-    <section class="max-w-5xl mx-auto px-6 pb-24">
-        <h2 class="text-3xl mb-10">Selected Work</h2>
+        <!-- Project Tile -->
+        <a href="surveys.html" class="group block">
+            <div class="border border-[#2F2A26] rounded-2xl overflow-hidden transition hover:shadow-xl">
 
+                <div class="md:flex">
 
-        <div class="grid md:grid-cols-2 gap-10">
+                    <!-- LEFT: Image -->
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+                            class="w-full h-full object-cover md:h-[420px]" />
+                    </div>
 
+                    <!-- RIGHT: Text -->
+                    <div class="md:w-1/2 p-10 flex flex-col justify-center">
 
-            <article class="bg-white rounded-3xl shadow-sm overflow-hidden">
-                <img src="https://source.unsplash.com/800x600/?survey,notebook" alt="Survey project"
-                    class="h-56 w-full object-cover">
-                <div class="p-8">
-                    <h3 class="text-2xl mb-2">Exam Feedback Survey Overhaul</h3>
-                    <p class="text-sm text-rose-500 mb-4">UX Research · Survey Design</p>
-                    <p class="text-slate-600 mb-6">
-                        Redesigning post-exam surveys to capture clearer insights into learner confidence and course
-                        effectiveness.
-                    </p>
-                    <a href="surveys.html" class="text-rose-600 font-medium">View case study →</a>
+                        <h3 class="text-3xl leading-snug font-semibold text-[#254E6E]">
+                            Survey Platform and Redesign
+                        </h3>
+
+                        <p class="mt-6 text-neutral-600 text-lg leading-relaxed">
+                            I helped redesign our the surveys for our edtech software to get better information on where
+                            users were struggling in
+                            our course, and how they performed on the real exam.
+                            We saw a [15x] increase in a specific response we were looking for. [Pls workshop ew]
+                        </p>
+
+                        <div class="mt-8">
+                            <span
+                                class="inline-block px-6 py-3 border border-[#2F2A26] rounded-lg shadow-sm group-hover:translate-x-1 transition">
+                                Read the case study
+                            </span>
+                        </div>
+
+                    </div>
+
                 </div>
-            </article>
 
+            </div>
+        </a>
 
-            <article class="bg-white rounded-3xl shadow-sm overflow-hidden">
-                <img src="https://source.unsplash.com/800x600/?design,branding" alt="Branding project"
-                    class="h-56 w-full object-cover">
-                <div class="p-8">
-                    <h3 class="text-2xl mb-2">Wiley Partnership Product Marketing</h3>
-                    <p class="text-sm text-rose-500 mb-4">UX Strategy · Product Marketing</p>
-                    <p class="text-slate-600 mb-6">
+        <!-- Project Tile -->
+        <a href="wiley.html" class="group block">
+            <div class="border border-[#2F2A26] rounded-2xl p-6 transition hover:-translate-y-1 hover:shadow-lg">
+
+                <!-- Title + Subtitle -->
+                <div>
+                    <h3 class="text-2xl font-semibold tracking-tight">
+                        Project Two - Wiley Partnership Product Marketing
+                    </h3>
+                    <p class="text-sm text-neutral-600 mt-1">
                         Leading product and design strategy to communicate value and trust through a high-profile
                         partnership.
                     </p>
-                    <a href="wiley.html" class="text-rose-600 font-medium">View case study →</a>
                 </div>
-            </article>
 
+                <!-- Divider -->
+                <div class="border-t border-[#2F2A26] my-5"></div>
 
-        </div>
+                <!-- Image -->
+                <div class="rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
+                        class="w-full h-72 object-cover transition duration-500 group-hover:scale-105" />
+                </div>
+
+                <!-- Role + Arrow -->
+                <div class="flex justify-between items-center mt-6">
+                    <div>
+                        <p class="font-medium">Product / UX</p>
+                        <p class="text-sm text-neutral-600">App Design</p>
+                    </div>
+
+                    <!-- Arrow Icon -->
+                    <svg class="w-7 h-7 group-hover:translate-x-1 group-hover:-translate-y-1 transition" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7V16" />
+                    </svg>
+                </div>
+
+            </div>
+        </a>
     </section>
 
+    <!-- Footer injected here -->
+    <div id="footer"></div>
 
-    <footer class="text-center py-12 text-sm text-slate-500">
-        © 2026 Vero Rod · UX Designer
-    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+            const header = await fetch("partials/header.html");
+            const footer = await fetch("partials/footer.html");
 
-
+            document.getElementById("header").innerHTML = await header.text();
+            document.getElementById("footer").innerHTML = await footer.text();
+        });
+    </script>
 </body>
 
 </html>

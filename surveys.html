@@ -4,64 +4,400 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Survey Overhaul — Vero Rod</title>
+    <title>Survey Redesign — Veronica Rodriguez</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
 
         h1,
-        h2 {
+        h2,
+        h3 {
             font-family: 'Playfair Display', serif;
         }
     </style>
 </head>
 
-<body class="bg-rose-50 text-slate-800">
+<body class="bg-[#fff1e3] text-[#2F2A26]">
 
+    <!-- Inject Header -->
+    <div id="header"></div>
 
-    <nav class="max-w-3xl mx-auto px-6 py-6">
-        <a href="index.html" class="text-rose-600">← Back</a>
-    </nav>
+    <!-- Hero -->
+    <section class="max-w-5xl mx-auto px-6 pt-24 my-12">
+        <h1 class="text-5xl leading-tight">
+            Survey Platform & Feedback Redesign
+        </h1>
 
+        <p class="my-6 text-lg text-neutral-600 max-w-2xl">
+            Top level description here? Put the metric right in their face: <span
+                class="font-semibold text-[#F74560]">1,567%</span>.
+        </p>
 
-    <main class="max-w-3xl mx-auto px-6 pb-24">
-        <h1 class="text-4xl mb-4">Exam Feedback Survey Overhaul</h1>
-        <p class="text-rose-500 mb-10">UX Research · Accounting Exam Prep</p>
+        <div class="w-full h-80 bg-neutral-200 rounded-xl flex items-center justify-center">
+            <span class="text-neutral-500 text-sm">Placeholder</span>
+        </div>
+    </section>
 
+    <!-- Overview -->
+    <section class="max-w-5xl mx-auto px-6 py-16 space-y-16 border-t border-[#2F2A26]">
 
-        <img src="https://source.unsplash.com/1000x600/?research,notes" class="rounded-2xl mb-12" />
+        <h2 class="text-3xl mb-4">Project Overview</h2>
 
+        <div>
+            <h3 class="text-2xl mb-4">The Challenge</h3>
+            <p class="text-neutral-700 leading-relaxed">
+                Our accounting SaaS platform's existing survey system was creating friction for users and operational
+                burden for our engineering team. Users encountered poorly-timed questions about exams they hadn't yet
+                taken, unclear optional vs. required fields, and a confusing experience that didn't account for the
+                significant differences between certification types (CPA, CMA, etc.). Meanwhile, engineers were
+                hand-coding each survey from scratch, making iteration slow and resource-intensive.
+            </p>
+        </div>
 
-        <section class="space-y-10">
-            <div>
-                <h2 class="text-2xl mb-2">The Problem</h2>
-                <p class="text-slate-600">Existing surveys produced vague, inconsistent feedback that was difficult to
-                    act on.</p>
+        <div>
+            <h3 class="text-2xl mb-2">My Role</h3>
+            <p class="text-neutral-700">
+                UX Designer responsible for end-to-end survey experience redesign, including content strategy,
+                survey logic, delivery mechanisms, and cross-functional coordination with Product and Engineering.
+            </p>
+        </div>
+
+        <div>
+            <h3 class="text-2xl mb-2">The Goal</h3>
+            <ol class="space-y-2 text-neutral-700">
+                <li><b>User-facing:</b> Create a timely, contextually relevant survey experience that adapts to each
+                    certification path</li>
+                <li><b>Business-facing:</b> Increase score report acquisition and user response rates while
+                    establishing a scalable survey
+                    infrastructure</li>
+                <li><b>Operational:</b> Enable non-engineers to build and iterate on surveys independently using a
+                    third-party platform</li>
+            </ol>
+        </div>
+
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 py-16 space-y-16 border-t border-[#2F2A26]">
+
+        <h2 class="text-3xl">Navigating Constraints Through Collaboration</h2>
+
+        <div>
+            <p class="mb-4">
+                This project required careful balance between competing stakeholder needs. When friction emerged between
+                the PM's requirement for an open-source platform and Engineering's preference for paid solutions with
+                more robust features, I took on a facilitator role.
+            </p>
+            <p class="mb-4">
+                <b>My approach:</b> I assembled a comparative analysis deck for the engineering team to present to our
+                Director of Operations. While open-source options met our data privacy requirements (we needed a
+                platform that wouldn't store user data), they would significantly increase engineering implementation
+                time—we'd still
+                need to build custom infrastructure for data handling and routing. The analysis also documented which
+                platforms included
+                built-in dashboard capabilities versus requiring custom builds.
+            </p>
+            <p class="mb-4">
+                Given that the project ultimately took a year with several interruptions *using* a third-party platform,
+                an open-source solution would have extended the timeline considerably. This deck became the foundation
+                for getting organizational buy-in on Formsort and demonstrated how design can surface the true
+                cost-benefit
+                tradeoffs across technical and business considerations.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Three Path Solution -->
+    <section class="max-w-5xl mx-auto px-6 py-16 border-t border-[#2F2A26] space-y-12">
+
+        <h2 class="text-3xl">Designing for Context: The Three-Path Solution</h2>
+
+        <p class="text-neutral-700 leading-relaxed">
+            Rather than creating a one-size-fits-all survey, I identified three distinct user states that required
+            different experiences:
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="border border-[#2F2A26] rounded-xl p-6">
+                <h3 class="text-xl mb-2">Completed Exam</h3>
+                <p class="text-sm text-neutral-600">
+                    Focus on score collection and post-exam feedback.
+                </p>
             </div>
 
-
-            <div>
-                <h2 class="text-2xl mb-2">My Role</h2>
-                <ul class="list-disc ml-6 text-slate-600">
-                    <li>Survey UX and IA lead</li>
-                    <li>Cross-functional collaboration</li>
-                    <li>User empathy mapping</li>
-                </ul>
+            <div class="border border-[#2F2A26] rounded-xl p-6">
+                <h3 class="text-xl mb-2">Not Yet Taken</h3>
+                <p class="text-sm text-neutral-600">
+                    Gather preparation insights without premature questions.
+                </p>
             </div>
 
-
-            <div>
-                <h2 class="text-2xl mb-2">Outcome</h2>
-                <p class="text-slate-600">Improved completion rates and clearer insight into learner preparedness.</p>
+            <div class="border border-[#2F2A26] rounded-xl p-6">
+                <h3 class="text-xl mb-2">On a Study Break</h3>
+                <p class="text-sm text-neutral-600">
+                    Understand barriers sensitively (including "personal reasons" as an option to balance business needs
+                    with user privacy)
+                </p>
             </div>
-        </section>
-    </main>
+        </div>
 
+        <div class="space-y-8">
+
+            <p class="text-neutral-700 leading-relaxed text-lg">
+                <span class="font-semibold">The design process:</span>
+            </p>
+
+            <ul class="list-disc pl-6 space-y-4 text-neutral-700 leading-relaxed text-lg">
+                <li>
+                    Cataloged questions we needed answered based on internal knowledge gaps and previous user feedback
+                </li>
+                <li>
+                    Created high-fidelity wireframes showing all three conditional flows
+                </li>
+                <li>
+                    Developed a logic diagram for engineers and QA testers to validate branching without manually
+                    testing every path
+                </li>
+                <li>
+                    Built a timing chart showing when each certification type should receive which survey variant
+                </li>
+            </ul>
+
+            <p class="text-neutral-700 leading-relaxed text-lg">
+                This systematic approach ensured everyone understood not just <em>what</em> we were building, but
+                <em>why</em>
+                certain questions appeared for certain users at certain times.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Strategic Pivot -->
+    <section class="max-w-5xl mx-auto px-6 py-16 space-y-10">
+
+        <h2 class="text-3xl">Strategic Pivot: Rethinking Delivery</h2>
+
+        <p class="text-neutral-700 leading-relaxed">
+            Initially, we explored modal delivery at three key points in the user journey. Through collaborative
+            discussion with
+            Product and Engineering, we uncovered a critical insight: our platform already used modals frequently for
+            other
+            interventions, and adding another would create notification fatigue.
+        </p>
+
+        <p class="text-neutral-700 leading-relaxed">
+            <b>The solution:</b> We repurposed an existing header element that appeared at course completion—a location
+            I
+            had previously redesigned with another designer three years prior. This turned out to be a fortunate
+            decision:
+            the previous survey in that location had strong response rates, but no one had connected that success to the
+            placement
+            itself.
+        </p>
+
+        <p>
+            For CPA and CMA users with dramatically different exam timelines, we supplemented with targeted email
+            campaigns. I researched survey notification patterns on Mobbin and used AI to help draft contextually
+            appropriate copy
+            for each user segment.
+        </p>
+
+    </section>
+
+    <!-- Building Bridges with Visual Communication -->
+    <section class="max-w-5xl mx-auto px-6 py-24 border-t border-[#2F2A26]">
+
+        <div class="space-y-10">
+
+            <h2 class="text-3xl">Building Bridges with Visual Communication</h2>
+
+            <p class="text-neutral-700 leading-relaxed text-lg">
+                One of my most valuable contributions was creating artifacts that made complex logic accessible to
+                non-designers:
+            </p>
+
+            <ul class="list-disc pl-6 space-y-4 text-neutral-700 leading-relaxed text-lg">
+                <li>
+                    <span class="font-semibold">Conditional logic flowcharts</span> allowed testers and engineers to
+                    evaluate survey behavior without constant manual testing
+                </li>
+                <li>
+                    <span class="font-semibold">Timing charts</span> aligned stakeholders on when different
+                    certification
+                    paths would trigger surveys
+                </li>
+                <li>
+                    <span class="font-semibold">Delivery mechanism presentations</span> explored email vs. modal options
+                    with visual mockups
+                </li>
+            </ul>
+
+            <p class="text-neutral-700 leading-relaxed text-lg">
+                These tools transformed abstract concepts into concrete discussion points, enabling faster feedback
+                cycles
+                and making cross-functional team members feel invested in the outcome.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Validation -->
+    <section class="max-w-5xl mx-auto px-6 py-16 border-t border-[#2F2A26] space-y-10">
+
+        <h2 class="text-3xl">Validation & Iteration</h2>
+
+        <p class="text-neutral-700 leading-relaxed">
+            I facilitated review sessions with testers, PMs, and engineers at key milestones. One critical piece of
+            feedback reshaped the score request question: not all certifications provide numerical scores upon passing.
+            Users
+            were confused by requests for information they didn't have, even when marked optional.
+        </p>
+
+        <p class="text-neutral-700 leading-relaxed">
+            <b>The fix:</b> I added conditional logic to only surface the score question for certification types that
+            actually issue scores, reducing confusion and improving data quality.
+        </p>
+
+    </section>
+
+    <!-- Impact -->
+    <section class="max-w-5xl mx-auto px-6 py-28 border-t border-[#2F2A26]">
+
+        <div class="max-w-4xl mx-auto space-y-16">
+
+            <h2 class="text-3xl">Impact</h2>
+
+            <p class="text-neutral-700 leading-relaxed text-lg">
+                Comparing the same three-month period year-over-year:
+            </p>
+
+            <!-- Metrics -->
+            <div class="grid md:grid-cols-2 gap-12">
+
+                <div class="border border-[#2F2A26] rounded-2xl p-10 text-center bg-white">
+                    <p class="text-sm uppercase tracking-wider text-neutral-500 mb-4">
+                        Previous year
+                    </p>
+                    <p class="text-6xl font-semibold">
+                        30
+                    </p>
+                    <p class="mt-4 text-neutral-600">
+                        score reports collected
+                    </p>
+                </div>
+
+                <div class="border border-[#2F2A26] rounded-2xl p-10 text-center bg-white">
+                    <p class="text-sm uppercase tracking-wider text-neutral-500 mb-4">
+                        After redesign
+                    </p>
+                    <p class="text-6xl font-semibold text-[#F74560]">
+                        500
+                    </p>
+                    <p class="mt-4 text-neutral-600">
+                        score reports collected
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Highlight Statement -->
+            <div class="text-center pt-8">
+                <p class="text-2xl font-semibold">
+                    That's a 1,567% increase in score report acquisition.
+                </p>
+            </div>
+
+            <!-- Operational Impact -->
+            <p class="text-neutral-700 leading-relaxed text-lg max-w-3xl mx-auto text-center">
+                Beyond metrics, we achieved our operational goal: non-engineers can now build and deploy surveys
+                independently, freeing engineering resources for higher-priority work while giving our team agility to
+                respond to user research needs quickly.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- What I Learned -->
+    <section class="max-w-5xl mx-auto px-6 pb-32 space-y-10">
+
+        <h2 class="text-3xl">What I Learned</h2>
+
+        <p class="text-neutral-700 leading-relaxed">
+            <b>Small changes compound.</b> We didn't initially plan to update the survey's header location—we only
+            intended to
+            refresh its content. But recognizing
+            the placement's previous success and preserving it proved as valuable as the new survey itself.
+        </p>
+
+        <p class="text-neutral-700 leading-relaxed">
+            <b>Visual artifacts are collaboration tools.</b> Flowcharts and diagrams didn't just document decisions—they
+            invited participation. Testers could spot logic errors, engineers could flag technical concerns earlier, and
+            PMs
+            could validate business requirements before I invested time in detailed design.
+        </p>
+
+        <p class="text-neutral-700 leading-relaxed">
+            <b>Balanced advocacy matters.</b> Users needed privacy and clarity. The business needed data. Engineering
+            needed feasibility. My role wasn't to champion one stakeholder over others, but to find the design solution
+            that
+            served all three—like offering "personal reasons" as a response option that gave counselors a touchpoint
+            without
+            forcing disclosure.
+        </p>
+
+    </section>
+
+    <!-- Moving Forward -->
+    <section class="max-w-5xl mx-auto px-6 py-24 border-t border-[#2F2A26]">
+
+        <div class="space-y-8">
+
+            <h2 class="text-3xl">Moving Forward</h2>
+
+            <p class="text-neutral-700 leading-relaxed text-lg">
+                This project reinforced the power of
+                <span class="font-semibold">communication artifacts</span>—flowcharts, timing diagrams, and logic maps—
+                when all team members are aligned and engaged.
+                The success I saw here has influenced how I scope similar projects:
+                I now draft <span class="font-semibold">design briefs</span> upfront to establish shared understanding
+                of deliverables and success criteria from day one.
+                And I've learned to question assumptions about "small" changes—sometimes repositioning
+                existing UI elements creates more value than designing new ones.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Inject Footer -->
+    <div id="footer"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+            const header = await fetch("partials/header.html");
+            const footer = await fetch("partials/footer.html");
+
+            document.getElementById("header").innerHTML = await header.text();
+            document.getElementById("footer").innerHTML = await footer.text();
+        });
+    </script>
 
 </body>
 
