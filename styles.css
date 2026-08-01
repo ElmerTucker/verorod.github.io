@@ -518,6 +518,722 @@ a.project-button:focus-visible {
     }
 }
 
+/* Survey redesign case study */
+.survey-page {
+    --survey-blue: #123097;
+    --survey-ink: #122534;
+    --survey-line: #7ca4ff;
+    --survey-pale: #e9efff;
+    min-width: 0;
+    overflow-x: hidden;
+    background: var(--canvas);
+    color: var(--survey-ink);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.62;
+}
+
+.survey-page .site-header {
+    position: relative;
+    z-index: 2;
+}
+
+.survey-page main {
+    overflow: hidden;
+}
+
+.survey-shell {
+    width: min(100% - 128px, 1312px);
+    margin-inline: auto;
+}
+
+.survey-hero {
+    min-height: 422px;
+    padding-block: 112px 80px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.62fr) minmax(180px, 0.5fr);
+    align-items: start;
+    gap: 72px;
+}
+
+.survey-eyebrow {
+    margin: 0 0 12px;
+    color: var(--survey-blue);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.survey-hero h1,
+.survey-page h2,
+.survey-page h3,
+.survey-page h4,
+.survey-meta dt {
+    font-family: "Playfair Display", serif;
+}
+
+.survey-hero h1 {
+    margin: 0;
+    color: var(--survey-blue);
+    font-size: clamp(54px, 5.3vw, 77px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+.survey-meta {
+    display: contents;
+    margin: 0;
+}
+
+.survey-meta div {
+    min-width: 0;
+}
+
+.survey-meta dt {
+    margin-bottom: 18px;
+    color: var(--survey-blue);
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.survey-meta dd {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.survey-case-study {
+    padding-bottom: 78px;
+}
+
+.survey-section {
+    padding-block: 48px;
+}
+
+.survey-section + .survey-section {
+    padding-top: 38px;
+}
+
+.survey-heading-row {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.survey-heading-row h2,
+.survey-centered-heading {
+    margin: 0;
+    color: var(--survey-blue);
+    font-size: clamp(34px, 3.15vw, 45px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+.survey-heading-row span {
+    height: 2px;
+    flex: 1;
+    background: var(--survey-line);
+}
+
+.survey-heading-row--small h2 {
+    font-size: clamp(30px, 2.45vw, 37px);
+}
+
+.survey-intro {
+    max-width: 1120px;
+    margin: 0;
+    font-size: 18px;
+}
+
+.survey-copy {
+    display: grid;
+    gap: 18px;
+}
+
+.survey-copy p,
+.survey-section > p,
+.survey-subsection > p {
+    max-width: 1180px;
+    margin: 0;
+}
+
+.survey-centered-heading {
+    text-align: center;
+}
+
+.goal-grid {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 38px 30px;
+}
+
+.goal-card {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.goal-card--wide-left {
+    grid-column: 2 / span 2;
+}
+
+.goal-card--wide-right {
+    grid-column: 4 / span 2;
+}
+
+.goal-mark {
+    position: relative;
+    width: 112px;
+    height: 104px;
+    margin: 0 auto 18px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid rgba(18, 48, 151, 0.14);
+    border-radius: 3px;
+    background: #dfe3ea;
+    color: var(--survey-blue);
+}
+
+.goal-mark::before,
+.goal-mark::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(18, 48, 151, 0.32);
+}
+
+.goal-mark::before {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+}
+
+.goal-mark::after {
+    width: 84px;
+    height: 1px;
+    border-width: 1px 0 0;
+    transform: rotate(-38deg);
+}
+
+.goal-mark span {
+    position: relative;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--canvas);
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.goal-mark--business::after {
+    transform: rotate(38deg);
+}
+
+.goal-mark--operations::before {
+    border-radius: 2px;
+    transform: rotate(45deg);
+}
+
+.goal-mark--strategy::after {
+    width: 68px;
+    height: 68px;
+    border: 1px solid rgba(18, 48, 151, 0.32);
+    border-radius: 2px;
+    transform: rotate(22deg);
+}
+
+.goal-mark--design::before {
+    width: 72px;
+    height: 34px;
+    border-radius: 999px;
+}
+
+.goal-card h3 {
+    margin: 0 0 4px;
+    color: var(--survey-blue);
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.goal-card p {
+    max-width: 320px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.survey-subsection {
+    padding-top: 24px;
+}
+
+.survey-subsection + .survey-subsection {
+    margin-top: 34px;
+}
+
+.survey-subsection h3,
+.solution-callout h3,
+.clarity-section h3 {
+    margin: 0 0 12px;
+    color: var(--survey-blue);
+    font-size: clamp(28px, 2.5vw, 36px);
+    line-height: 1.2;
+}
+
+.path-list {
+    margin-top: 34px;
+    display: grid;
+    gap: 22px;
+}
+
+.path-card {
+    display: grid;
+    grid-template-columns: 156px minmax(0, 1fr);
+    align-items: center;
+    gap: 48px;
+}
+
+.path-number {
+    min-height: 138px;
+    display: grid;
+    place-items: center;
+    background: #dfe3ea;
+    color: transparent;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    -webkit-text-stroke: 1.5px var(--survey-blue);
+}
+
+.path-card h4 {
+    margin: 0 0 5px;
+    color: var(--survey-blue);
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.path-card p {
+    max-width: 950px;
+    margin: 0;
+}
+
+.timing-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    border: 1px solid rgba(18, 48, 151, 0.25);
+    background: rgba(18, 48, 151, 0.25);
+}
+
+.timing-grid div {
+    min-height: 122px;
+    padding: 24px;
+    background: var(--canvas);
+}
+
+.timing-grid span {
+    display: block;
+    color: var(--survey-blue);
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.timing-grid p {
+    margin: 4px 0 0;
+    color: #44515b;
+    font-size: 14px;
+}
+
+.persona-figure {
+    margin: 60px auto 0;
+}
+
+.persona-figure img {
+    display: block;
+    width: 100%;
+    border: 2px solid var(--rule);
+    background: #edf1fb;
+}
+
+.persona-figure figcaption {
+    max-width: 760px;
+    margin: 14px auto 0;
+    color: #53606a;
+    font-size: 14px;
+    text-align: center;
+}
+
+.survey-narrative {
+    margin-top: 18px;
+}
+
+.solution-callout {
+    margin-top: 38px;
+    padding: 42px 48px;
+    border-left: 6px solid var(--survey-blue);
+    background: var(--survey-pale);
+}
+
+.solution-callout .survey-eyebrow {
+    margin-bottom: 6px;
+}
+
+.solution-callout p:last-child {
+    max-width: 1090px;
+    margin: 0;
+}
+
+.process-strip {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-block: 1px solid rgba(18, 48, 151, 0.25);
+}
+
+.process-strip article {
+    min-height: 215px;
+    padding: 28px;
+    border-left: 1px solid rgba(18, 48, 151, 0.25);
+}
+
+.process-strip article:first-child {
+    border-left: 0;
+}
+
+.process-strip span {
+    color: var(--survey-line);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.process-strip h3 {
+    margin: 30px 0 7px;
+    color: var(--survey-blue);
+    font-size: 25px;
+}
+
+.process-strip p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.clarity-section {
+    margin-top: 46px;
+}
+
+.clarity-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+    gap: 70px;
+}
+
+.clarity-grid aside {
+    align-self: start;
+    padding: 32px;
+    background: var(--survey-blue);
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.45;
+}
+
+.clarity-grid aside p {
+    margin: 0;
+}
+
+.impact-section {
+    padding-bottom: 72px;
+}
+
+.impact-grid {
+    margin-top: 42px;
+    display: grid;
+    grid-template-columns: minmax(170px, 0.75fr) auto minmax(170px, 0.75fr) minmax(290px, 1.45fr);
+    align-items: stretch;
+    gap: 24px;
+}
+
+.impact-stat,
+.impact-feature {
+    min-height: 210px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid var(--survey-blue);
+}
+
+.impact-stat span,
+.impact-feature strong {
+    color: var(--survey-blue);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(54px, 5vw, 72px);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.impact-stat p,
+.impact-feature p {
+    margin: 12px 0 0;
+}
+
+.impact-stat--after {
+    background: var(--survey-pale);
+}
+
+.impact-arrow {
+    align-self: center;
+    color: var(--survey-blue);
+    font-size: 40px;
+}
+
+.impact-feature {
+    border-color: var(--survey-blue);
+    background: var(--survey-blue);
+    color: white;
+}
+
+.impact-feature strong {
+    color: white;
+}
+
+.case-study-nav {
+    padding-top: 36px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.case-study-nav a {
+    color: var(--survey-blue);
+    font-weight: 600;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+
+@media (max-width: 1000px) {
+    .survey-shell {
+        width: min(100% - 64px, 1312px);
+    }
+
+    .survey-hero {
+        min-height: 0;
+        padding-block: 80px 58px;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+    }
+
+    .survey-hero-title {
+        grid-column: 1 / -1;
+    }
+
+    .goal-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .goal-card,
+    .goal-card--wide-left,
+    .goal-card--wide-right {
+        grid-column: auto;
+    }
+
+    .goal-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 360px;
+        justify-self: center;
+    }
+
+    .process-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .process-strip article:nth-child(3) {
+        border-left: 0;
+        border-top: 1px solid rgba(18, 48, 151, 0.25);
+    }
+
+    .process-strip article:nth-child(4) {
+        border-top: 1px solid rgba(18, 48, 151, 0.25);
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr auto 1fr;
+    }
+
+    .impact-feature {
+        grid-column: 1 / -1;
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 700px) {
+    .survey-shell {
+        width: min(100% - 40px, 1312px);
+    }
+
+    .survey-hero {
+        padding-block: 58px 42px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .survey-hero-title {
+        grid-column: auto;
+    }
+
+    .survey-hero h1 {
+        font-size: clamp(48px, 14vw, 66px);
+    }
+
+    .survey-meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 26px;
+    }
+
+    .survey-meta dt {
+        margin-bottom: 8px;
+        font-size: 25px;
+    }
+
+    .survey-section,
+    .survey-section + .survey-section {
+        padding-block: 34px;
+    }
+
+    .survey-heading-row {
+        align-items: flex-end;
+        gap: 14px;
+    }
+
+    .survey-heading-row h2,
+    .survey-centered-heading {
+        font-size: 34px;
+    }
+
+    .survey-intro {
+        font-size: 16px;
+    }
+
+    .goal-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .goal-card:last-child {
+        grid-column: auto;
+    }
+
+    .path-card {
+        grid-template-columns: 92px minmax(0, 1fr);
+        align-items: start;
+        gap: 20px;
+    }
+
+    .path-number {
+        min-height: 92px;
+        font-size: 36px;
+    }
+
+    .path-card h4 {
+        font-size: 22px;
+    }
+
+    .timing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .persona-figure {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+    }
+
+    .persona-figure figcaption {
+        padding-inline: 20px;
+    }
+
+    .solution-callout {
+        padding: 30px 26px;
+    }
+
+    .process-strip,
+    .clarity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-strip article,
+    .process-strip article:nth-child(2) {
+        min-height: 0;
+        border-top: 1px solid rgba(18, 48, 151, 0.25);
+        border-left: 0;
+    }
+
+    .process-strip article:first-child {
+        border-top: 0;
+    }
+
+    .process-strip h3 {
+        margin-top: 16px;
+    }
+
+    .clarity-grid {
+        gap: 30px;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-stat,
+    .impact-feature {
+        min-height: 170px;
+    }
+
+    .impact-arrow {
+        transform: rotate(90deg);
+    }
+
+    .impact-feature {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 430px) {
+    .survey-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .timing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .path-card {
+        grid-template-columns: 1fr;
+    }
+
+    .path-number {
+        width: 92px;
+    }
+
+    .case-study-nav {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
 /* Digital Pilot Examiner case study */
 
 .case-study-page {
